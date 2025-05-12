@@ -59,33 +59,7 @@ const Index = () => {
               Create Campaign
             </Button>
           </div>
-        </div>
-        
-        <Card className="bg-gradient-to-r from-brand-50 to-brand-100 border-brand-200">
-          <CardContent className="pt-6">
-            <div className="flex flex-col items-center text-center px-4 py-2">
-              <h2 className="text-xl font-bold text-brand-800 mb-2">AI-Powered Segment Creation</h2>
-              <p className="text-brand-700 mb-4">Describe your audience in plain language and let AI build the segment for you</p>
-              
-              <div className="w-full max-w-2xl flex flex-col sm:flex-row gap-2 items-center">
-                <input 
-                  type="text"
-                  className="flex-1 px-4 py-2 rounded-md border border-brand-300 focus:outline-none focus:ring-2 focus:ring-brand-500 w-full"
-                  placeholder="e.g., customers who spent over ₹5000 and haven't purchased in 90 days"
-                  value={nlPrompt}
-                  onChange={(e) => setNlPrompt(e.target.value)}
-                />
-                <Button 
-                  className="bg-brand-500 hover:bg-brand-600 whitespace-nowrap"
-                  onClick={handleNaturalLanguageQuery}
-                >
-                  Find Audience
-                </Button>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
-        
+        </div>        
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           <Card>
             <CardContent className="p-6">
