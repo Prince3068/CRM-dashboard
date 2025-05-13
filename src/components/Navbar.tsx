@@ -79,7 +79,9 @@ const Navbar = ({ onMenuClick }: NavbarProps) => {
               </PopoverTrigger>
               <PopoverContent className="w-56" align="end">
                 <div className="flex flex-col space-y-1">
-                  <p className="text-sm text-muted-foreground">{user.email}</p>
+                  <p className="text-sm text-muted-foreground">
+                    {user.email ? user.email : ""}
+                  </p>
                 </div>
                 <div className="mt-4 border-t pt-2">
                   <Button
