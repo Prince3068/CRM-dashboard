@@ -17,7 +17,7 @@ interface NavbarProps {
 const Navbar = ({ onMenuClick }: NavbarProps) => {
   const isMobile = useIsMobile();
   const [isLoggedIn, setIsLoggedIn] = useState(true);
-  const { user } = useUserStore();
+  const { userName, userEmail } = useUserStore();
 
   const handleLogin = () => {
     setIsLoggedIn(true);
@@ -72,14 +72,15 @@ const Navbar = ({ onMenuClick }: NavbarProps) => {
                   <Avatar className="h-8 w-8">
                     <AvatarImage src="" alt="User" />
                     <AvatarFallback className="bg-brand-500 text-white">
-                      PK
+                      UM
                     </AvatarFallback>
                   </Avatar>
                 </Button>
               </PopoverTrigger>
               <PopoverContent className="w-56" align="end">
                 <div className="flex flex-col space-y-1">
-                  <p className="text-sm text-muted-foreground">{user.email}</p>
+                  <p className="font-medium">{userName}</p>
+                  <p className="text-sm text-muted-foreground">{userEmail}</p>
                 </div>
                 <div className="mt-4 border-t pt-2">
                   <Button
